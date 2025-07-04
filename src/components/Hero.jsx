@@ -8,12 +8,12 @@ const Hero = () => {
       {/* Neural Particle Background */}
       <NeuralBackground />
 
-      {/* Foreground Content */}
+      {/* Foreground Content - Add pointer-events-none to allow mouse interaction */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 px-4 max-w-3xl mx-auto"
+        className="relative z-10 px-4 max-w-3xl mx-auto pointer-events-none"
       >
         <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-[0_0_15px_#6f00ff]">
           Hi, I'm Sandip Verma
