@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-black text-white font-sans;
-  background: radial-gradient(circle at top left, #0f0f1b, #000000);
-  overflow-x: hidden;
+@layer base {
+  body {
+    @apply bg-black text-white;
+    background: radial-gradient(circle at top left, #0f0f1b, #000000);
+    overflow-x: hidden;
+  }
 }
 
-.glass-card {
-  @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl p-6 hover:shadow-purple-500/30 transition;
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl p-6;
+    @apply hover:shadow-[0_0_15px_rgba(111,0,255,0.3)] transition-all;
+  }
 }
