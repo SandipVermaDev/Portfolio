@@ -6,10 +6,15 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
+import CustomCursor from './components/CustomCursor';
+import IntroOverlay from './components/IntroOverlay';
+
 function App() {
   return (
     <div className="w-full min-h-screen bg-black text-white scroll-smooth">
       <Navbar />
+      <IntroOverlay />
+      <CustomCursor />
 
       <section id="home"><Hero /></section>
       <section id="education"><Education /></section>

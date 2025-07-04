@@ -14,6 +14,11 @@ export default {
         neon: '#00ffe7',
       },
       keyframes: {
+        glowBar: {
+          '0%': { opacity: 0.6 },
+          '50%': { opacity: 1 },
+          '100%': { opacity: 0.6 },
+        },
         glow: {
           '0%, 100%': {
             textShadow: '0 0 10px #c800ff, 0 0 20px #c800ff',
@@ -62,13 +67,25 @@ export default {
             transform: 'rotate(360deg)',
           },
         },
+        orbitPulse: {
+          '0%, 100%': {
+            transform: 'rotate(0deg) scale(1)',
+            boxShadow: '0 0 15px #00ffe7, 0 0 25px #6f00ff',
+          },
+          '50%': {
+            transform: 'rotate(180deg) scale(1.05)',
+            boxShadow: '0 0 25px #6f00ff, 0 0 35px #00ffe7',
+          },
+        },
       },
       animation: {
-        'glow': 'glow 3s ease-in-out infinite',
+        glowBar: 'glowBar 1s ease-in-out infinite',
+        glow: 'glow 3s ease-in-out infinite',
         'text-shimmer': 'shimmer 4s linear infinite',
         'border-glow': 'borderGlow 2s ease-in-out infinite',
         'pulse-glow': 'pulseGlow 1.5s ease-in-out infinite',
-        'orbit': 'orbit 6s linear infinite',
+        orbit: 'orbit 6s linear infinite',
+        'orbit-glow': 'orbitPulse 6s linear infinite',
       },
       backgroundSize: {
         '200': '200% 200%',
