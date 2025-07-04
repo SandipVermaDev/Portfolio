@@ -27,6 +27,14 @@ export default {
             textShadow: '0 0 20px #c800ff, 0 0 40px #c800ff',
           },
         },
+        shimmer: {
+          '0%': {
+            backgroundPosition: '-200% 0',
+          },
+          '100%': {
+            backgroundPosition: '200% 0',
+          },
+        },
         glowGradient: {
           '0%, 100%': {
             backgroundPosition: '0% 50%',
@@ -41,14 +49,6 @@ export default {
           },
           '50%': {
             boxShadow: '0 0 20px #00ffe7, 0 0 30px #6f00ff',
-          },
-        },
-        shimmer: {
-          '0%': {
-            backgroundPosition: '-200% 0',
-          },
-          '100%': {
-            backgroundPosition: '200% 0',
           },
         },
         pulseGlow: {
@@ -81,14 +81,16 @@ export default {
       animation: {
         glowBar: 'glowBar 1s ease-in-out infinite',
         glow: 'glow 3s ease-in-out infinite',
-        'text-shimmer': 'shimmer 4s linear infinite',
+        'text-shimmer': 'shimmer 10s linear infinite',
         'border-glow': 'borderGlow 2s ease-in-out infinite',
         'pulse-glow': 'pulseGlow 1.5s ease-in-out infinite',
         orbit: 'orbit 6s linear infinite',
         'orbit-glow': 'orbitPulse 6s linear infinite',
+        'glow-gradient': 'glowGradient 5s ease-in-out infinite', // ✅ For navbar
       },
       backgroundSize: {
         '200': '200% 200%',
+        '300': '300% 300%',
       },
     },
   },

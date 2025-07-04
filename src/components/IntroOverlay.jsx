@@ -5,8 +5,20 @@ const IntroOverlay = () => {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(false), 1000); // 1 second delay
-    return () => clearTimeout(timer);
+    const hasVisited = localStorage.getItem('hasVisited');
+
+    if (hasVisited) {
+      // If already visited, skip intro immediately
+      setShow(false);
+    } else {
+      // Show intro for 1 second, then hide and mark as visited
+      const timer = setTimeout(() => {
+        setShow(false);
+        localStorage.setItem('hasVisited', 'true');
+      }, 1000); // 1 second
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   return (
@@ -29,7 +41,6 @@ const IntroOverlay = () => {
             Initializing Portfolio
           </motion.h1>
 
-          {/* Futuristic Loading Bar */}
           <motion.div
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}

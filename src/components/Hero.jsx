@@ -50,15 +50,19 @@ const Hero = () => {
           className="mt-8 md:mt-0 md:ml-12 text-center md:text-left pointer-events-none"
         >
           {/* "Hi, I'm" line */}
-          <p className="text-lg font-bold text-electric drop-shadow-[0_0_8px_#9b00ff] font-orbitron tracking-widest animate-glow">
+          <p className="text-lg md:text-xl font-bold 
+            bg-gradient-to-r from-neon via-white to-neon bg-[length:200%_200%] 
+            bg-clip-text text-transparent font-orbitron tracking-widest 
+            animate-text-shimmer drop-shadow-[0_0_10px_#00ffe7]">
             Hi, I'm
           </p>
 
           {/* Name shimmer animation */}
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white 
-            bg-gradient-to-r from-electric via-fuchsia-500 to-neon 
-            bg-[length:300%_300%] bg-clip-text text-transparent 
-            animate-text-shimmer mb-2 drop-shadow-[0_0_12px_#6f00ff]">
+          <h1 className="text-4xl md:text-6xl font-extrabold 
+            bg-gradient-to-r from-electric via-neon via-purple-500 via-neon to-electric
+            bg-[length:300%_300%] bg-clip-text text-transparent
+            animate-text-shimmer drop-shadow-[0_0_20px_#6f00ff] mb-2
+            transition-transform duration-1000 ease-in-out hover:scale-105">
             Sandip Verma
           </h1>
 
