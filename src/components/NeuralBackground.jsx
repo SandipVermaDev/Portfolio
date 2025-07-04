@@ -69,7 +69,7 @@ const NeuralBackground = () => {
     };
   }, []);
 
-  return <div id="particles-js" className="absolute inset-0 z-0" />;
+  return <div id="particles-js" className="absolute inset-0 z-0 bg-transparent pointer-events-auto" />
 };
 
 export default NeuralBackground;
