@@ -10,19 +10,28 @@ const RobotAssistant = () => {
   useEffect(() => {
     const handleMouseMove = (e) => {
       if (!containerRef.current) return;
-
+      
       const rect = containerRef.current.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
-
-      const dx = e.clientX - centerX;
-      const dy = e.clientY - centerY;
-
-      const maxTilt = 15;
-      const rotateX = Math.max(-maxTilt, Math.min(maxTilt, (dy / centerY) * maxTilt));
-      const rotateY = Math.max(-maxTilt, Math.min(maxTilt, -(dx / centerX) * maxTilt));
-
-      setRotation({ x: rotateX, y: rotateY });
+      
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      
+      // Strong amplification for noticeable movement
+      const dx = (mouseX - centerX) * 5; // Increased amplification
+      const dy = (mouseY - centerY) * 5; // Increased amplification
+      
+      // Calculate rotation angles with high sensitivity
+      const rotateY = dx / 20; // Horizontal rotation (left/right)
+      const rotateX = dy / 20; // Vertical rotation (up/down)
+      
+      // Apply generous but safe limits
+      const maxTilt = 25; // Increased max tilt for dramatic movement
+      setRotation({ 
+        x: Math.max(-maxTilt, Math.min(maxTilt, rotateX)),
+        y: Math.max(-maxTilt, Math.min(maxTilt, rotateY))
+      });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -42,20 +51,20 @@ const RobotAssistant = () => {
         className="w-full h-full absolute"
       />
 
-      {/* Robot Head (Follows Cursor) */}
-      <div
-        className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
+      {/* Robot Head with dramatic movement */}
+      <div 
+        className="absolute top-[10%] left-0 w-full h-full flex items-start justify-center"
         style={{
           transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
           transformStyle: 'preserve-3d',
-          transition: 'transform 0.15s ease-out',
+          transition: 'transform 0.1s ease-out',
         }}
       >
         <Lottie
           animationData={robotHead}
           loop
           autoplay
-          className="w-[80%] h-[80%]"
+          className="w-[70%] h-[70%]"
         />
       </div>
     </div>
