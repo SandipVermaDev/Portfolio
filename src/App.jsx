@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 
 import CustomCursor from './components/CustomCursor';
 import IntroOverlay from './components/IntroOverlay';
+import RobotAssistant from './components/RobotAssistant';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <IntroOverlay />
       <CustomCursor />
+      <RobotAssistant />
 
       <section id="home"><Hero /></section>
       <section id="education"><Education /></section>

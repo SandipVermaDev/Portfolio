@@ -86,7 +86,7 @@ export default {
         'pulse-glow': 'pulseGlow 1.5s ease-in-out infinite',
         orbit: 'orbit 6s linear infinite',
         'orbit-glow': 'orbitPulse 6s linear infinite',
-        'glow-gradient': 'glowGradient 5s ease-in-out infinite', // ✅ For navbar
+        'glow-gradient': 'glowGradient 5s ease-in-out infinite', // For navbar
       },
       backgroundSize: {
         '200': '200% 200%',

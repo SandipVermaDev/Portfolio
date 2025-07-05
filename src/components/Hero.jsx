@@ -51,7 +51,7 @@ const Hero = () => {
         >
           {/* "Hi, I'm" line */}
           <p className="text-lg md:text-xl font-bold 
-            bg-gradient-to-r from-neon via-white to-neon bg-[length:200%_200%] 
+            bg-gradient-to-r from-neon via-white via-white to-neon bg-[length:200%_200%] 
             bg-clip-text text-transparent font-orbitron tracking-widest 
             animate-text-shimmer drop-shadow-[0_0_10px_#00ffe7]">
             Hi, I'm
