@@ -53,7 +53,7 @@ const Education = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Timeline line */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#B8EF43] opacity-50 rounded-full" />
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#bee668] opacity-100 rounded-full" />
 
         <div className="flex flex-col gap-5 md:gap-0">
           {educationData.map((edu, index) => {
