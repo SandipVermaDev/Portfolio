@@ -187,7 +187,7 @@ const Hero = () => {
             </motion.a>
           </div>
 
-          {/* Resume Button with Glow Effect */}
+          {/* Resume Button with Glow Effect
           <div className="mt-6">
             <motion.a
               href="/resume.pdf"
@@ -220,7 +220,63 @@ const Hero = () => {
             >
               View Resume
             </motion.a>
+          </div> */}
+
+          {/* Resume Button with Enhanced Glow Effect */}
+          <div className="mt-6">
+            <motion.a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-2 border-2 border-electric text-neon font-bold rounded-md 
+               hover:bg-neon hover:text-black transition-all duration-300 
+               relative overflow-hidden group"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                boxShadow: [
+                  "0 0 8px rgba(0, 255, 231, 0.7)",
+                  "0 0 12px rgba(0, 255, 231, 0.9)",
+                  "0 0 15px rgba(0, 255, 231, 1)",
+                  "0 0 8px rgba(0, 255, 231, 0.7)"
+                ]
+              }}
+              transition={{
+                opacity: { duration: 0.5, delay: 1.6 },
+                scale: { duration: 0.5, delay: 1.6 },
+                boxShadow: { duration: 2, repeat: Infinity }
+              }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 20px #00ffe7, 0 0 40px #6f00ff"
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {/* Animated Glow Layer */}
+              <motion.span
+                className="absolute inset-0 bg-gradient-to-r from-[#00ffe7] via-[#6f00ff] to-[#00ffe7] 
+                opacity-0 group-hover:opacity-20 z-0"
+                animate={{
+                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              />
+
+              {/* Text with enhanced glow */}
+              <span className="relative z-10 
+          drop-shadow-[0_0_5px_#00ffe7] 
+          group-hover:drop-shadow-[0_0_15px_#ffffff] 
+          transition-all duration-300">
+                View Resume
+              </span>
+            </motion.a>
           </div>
+
         </motion.div>
       </div>
 
