@@ -1,4 +1,3 @@
-// components/RobotAssistant.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import Lottie from 'lottie-react';
 import robotBody from '../assets/robot body.json';
@@ -31,18 +30,29 @@ const RobotAssistant = () => {
       });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    // Disable face tracking on small screens (touch-based)
+    if (window.innerWidth >= 640) {
+      window.addEventListener('mousemove', handleMouseMove);
+      return () => window.removeEventListener('mousemove', handleMouseMove);
+    }
   }, []);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       <div
         ref={containerRef}
-        className="relative w-52 h-52 cursor-pointer"
+        className="relative w-28 h-28 sm:w-52 sm:h-52 cursor-pointer transition-all duration-300"
         onClick={() => setShowChat(prev => !prev)}
       >
-        <Lottie animationData={robotBody} loop autoplay className="w-full h-full absolute" />
+        {/* Robot Body (static) */}
+        <Lottie
+          animationData={robotBody}
+          loop
+          autoplay
+          className="w-full h-full absolute"
+        />
+
+        {/* Robot Head (rotates based on cursor) */}
         <div
           className="absolute top-[10%] left-0 w-full h-full flex items-start justify-center"
           style={{
@@ -52,9 +62,16 @@ const RobotAssistant = () => {
             filter: 'drop-shadow(0 0 12px #00ffe7)',
           }}
         >
-          <Lottie animationData={robotHead} loop autoplay className="w-[70%] h-[70%]" />
+          <Lottie
+            animationData={robotHead}
+            loop
+            autoplay
+            className="w-[70%] h-[70%]"
+          />
         </div>
       </div>
+
+      {/* Chat UI */}
       {showChat && <ChatBotUI onClose={() => setShowChat(false)} />}
     </div>
   );
