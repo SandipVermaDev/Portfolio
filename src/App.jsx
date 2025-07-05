@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import CustomCursor from './components/CustomCursor';
 import IntroOverlay from './components/IntroOverlay';
 import RobotAssistant from './components/RobotAssistant';
+import TransitionDivider from './components/TransitionDivider';
 
 function App() {
   return (
@@ -19,9 +20,13 @@ function App() {
       <RobotAssistant />
 
       <section id="home"><Hero /></section>
+      <TransitionDivider />
       <section id="education"><Education /></section>
+      <TransitionDivider />
       <section id="skills"><Skills /></section>
+      <TransitionDivider />
       <section id="projects"><Projects /></section>
+      <TransitionDivider />
       <section id="contact"><Contact /></section>
     </div>
   );
