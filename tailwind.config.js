@@ -15,10 +15,19 @@ export default {
       },
       keyframes: {
         // === General Glow Effects ===
-        glowBar: {
-          '0%': { opacity: 0.6 },
-          '50%': { opacity: 1 },
-          '100%': { opacity: 0.6 },
+        flashSweep: {
+          '0%': {
+            transform: 'translateX(-100%) scaleX(0.8)',
+            opacity: 0.2,
+          },
+          '50%': {
+            transform: 'translateX(0%) scaleX(1)',
+            opacity: 1,
+          },
+          '100%': {
+            transform: 'translateX(100%) scaleX(0.8)',
+            opacity: 0,
+          },
         },
         glow: {
           '0%, 100%': {
@@ -53,15 +62,15 @@ export default {
           '50%': { opacity: 1 },
         },
         bounceGlow: {
-    '0%, 100%': {
-      transform: 'translateY(0)',
-      boxShadow: '0 0 10px #00ffe7, 0 0 20px #00ffe7',
-    },
-    '50%': {
-      transform: 'translateY(-12px)',
-      boxShadow: '0 0 20px #6f00ff, 0 0 35px #00ffe7',
-    },
-  },
+          '0%, 100%': {
+            transform: 'translateY(0)',
+            boxShadow: '0 0 10px #00ffe7, 0 0 20px #00ffe7',
+          },
+          '50%': {
+            transform: 'translateY(-12px)',
+            boxShadow: '0 0 20px #6f00ff, 0 0 35px #00ffe7',
+          },
+        },
 
         // === Orbiting / Rotating ===
         orbit: {
@@ -114,7 +123,7 @@ export default {
             backgroundPosition: '100% 50%',
           },
         },
-        
+
 
         // === Chat Message and Typing ===
         messageGlow: {
@@ -140,7 +149,7 @@ export default {
       },
       animation: {
         // General
-        glowBar: 'glowBar 1s ease-in-out infinite',
+        'flash-sweep': 'flashSweep 1.2s ease-in-out forwards',
         glow: 'glow 3s ease-in-out infinite',
         'text-shimmer': 'shimmer 10s linear infinite',
         'border-glow': 'borderGlow 2s ease-in-out infinite',
