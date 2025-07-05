@@ -26,7 +26,7 @@ const ChatBotUI = ({ onClose }) => {
             transition={{ duration: 0.4 }}
             className="fixed bottom-24 sm:bottom-48 right-2 sm:right-6 w-[90vw] sm:w-[360px] max-h-[80vh] sm:max-h-[500px] rounded-xl 
              bg-gradient-to-br from-[#0d0d0d]/40 via-[#111111]/40 to-[#1c1c1c]/40 
-             animate-holo-bg border border-neon shadow-[0_0_30px_#00ffe7] 
+             animate-holo-bg border border-electric shadow-[0_0_30px_#00ffe7] 
              backdrop-blur-xl z-50 pointer-events-auto overflow-hidden"
         >
             {/* Header */}

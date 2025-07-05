@@ -69,9 +69,9 @@ const Hero = () => {
           {/* Typewriter effect */}
           <TypeAnimation
             sequence={[
-              'Data Scientist', 2000,
-              'Machine Learning Engineer', 2000,
-              'Data Analyst', 2000,
+              'Data Scientist', 1000,
+              'Machine Learning Engineer', 1000,
+              'Data Analyst', 1000,
             ]}
             wrapper="span"
             speed={50}
@@ -102,17 +102,28 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10">
-        <svg
-          className="w-6 h-6 text-neon animate-pulse-glow animate-bounce"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
+      <a
+        href="#education"
+        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="p-2 rounded-full border-2 border-neon shadow-[0_0_20px_#00ffe7] animate-bounce-glow"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </div>
+          <svg
+            className="w-6 h-6 text-neon"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </motion.div>
+      </a>
+
     </section>
   );
 };

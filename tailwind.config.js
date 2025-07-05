@@ -52,6 +52,16 @@ export default {
           '0%, 100%': { opacity: 0.7 },
           '50%': { opacity: 1 },
         },
+        bounceGlow: {
+    '0%, 100%': {
+      transform: 'translateY(0)',
+      boxShadow: '0 0 10px #00ffe7, 0 0 20px #00ffe7',
+    },
+    '50%': {
+      transform: 'translateY(-12px)',
+      boxShadow: '0 0 20px #6f00ff, 0 0 35px #00ffe7',
+    },
+  },
 
         // === Orbiting / Rotating ===
         orbit: {
@@ -136,6 +146,7 @@ export default {
         'border-glow': 'borderGlow 2s ease-in-out infinite',
         'pulse-glow': 'pulseGlow 1.5s ease-in-out infinite',
         'glow-gradient': 'glowGradient 5s ease-in-out infinite',
+        'bounce-glow': 'bounceGlow 1.8s ease-in-out infinite',
 
         // Orbit
         orbit: 'orbit 6s linear infinite',
