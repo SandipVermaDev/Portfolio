@@ -85,6 +85,49 @@ const Hero = () => {
             Driven by curiosity. Powered by code.
           </p>
 
+          {/* Social Links */}
+          <div className="mt-6 flex items-center justify-center md:justify-start gap-6 pointer-events-auto">
+            {/* LinkedIn */}
+            <motion.a
+              href="https://www.linkedin.com/in/sandip-verma-dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0, duration: 0.5 }}
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              className="text-neon hover:text-electric transition duration-300"
+            >
+              <i className="fab fa-linkedin fa-lg drop-shadow-[0_0_6px_#00ffe7] animate-pulse-glow" />
+            </motion.a>
+
+            {/* GitHub */}
+            <motion.a
+              href="https://github.com/SandipVermaDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+              whileHover={{ scale: 1.2, rotate: -5 }}
+              className="text-neon hover:text-electric transition duration-300"
+            >
+              <i className="fab fa-github fa-lg drop-shadow-[0_0_6px_#00ffe7] animate-pulse-glow" />
+            </motion.a>
+
+            {/* Email */}
+            <motion.a
+              href="mailto:iamsandip2608@gmail.com"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.4, duration: 0.5 }}
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              className="text-neon hover:text-electric transition duration-300"
+            >
+              <i className="fas fa-envelope fa-lg drop-shadow-[0_0_6px_#00ffe7] animate-pulse-glow" />
+            </motion.a>
+          </div>
+
           {/* Resume Button */}
           <div className="mt-6">
             <a

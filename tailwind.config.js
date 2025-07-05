@@ -71,6 +71,14 @@ export default {
             boxShadow: '0 0 20px #6f00ff, 0 0 35px #00ffe7',
           },
         },
+        glowGreen: {
+          '0%, 100%': {
+            textShadow: '0 0 10px #B8EF43, 0 0 20px #B8EF43',
+          },
+          '50%': {
+            textShadow: '0 0 20px #B8EF43, 0 0 40px #B8EF43',
+          },
+        },
 
         // === Orbiting / Rotating ===
         orbit: {
@@ -156,6 +164,7 @@ export default {
         'pulse-glow': 'pulseGlow 1.5s ease-in-out infinite',
         'glow-gradient': 'glowGradient 5s ease-in-out infinite',
         'bounce-glow': 'bounceGlow 1.8s ease-in-out infinite',
+        glowGreen: 'glowGreen 3s ease-in-out infinite',
 
         // Orbit
         orbit: 'orbit 6s linear infinite',
