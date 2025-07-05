@@ -45,15 +45,16 @@ const Education = () => {
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
         className="text-4xl md:text-5xl font-extrabold text-center text-[#B8EF43] mb-16 drop-shadow-[0_0_10px_#B8EF43] font-orbitron"
+        whileHover={{ scale: 1.05 }}
       >
         Education
       </motion.h2>
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Timeline line */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#bee668] opacity-100 rounded-full" />
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#B8EF43] opacity-100 rounded-full" />
 
         <div className="flex flex-col gap-5 md:gap-0">
           {educationData.map((edu, index) => {
@@ -68,8 +69,9 @@ const Education = () => {
                 className={`relative w-full flex ${isLeft ? 'justify-start pr-8' : 'justify-end pl-8'} items-center`}
               >
                 {/* Marker */}
-                <span className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#00ffe7] border-4 border-[#0c0f14] rounded-full shadow-[0_0_12px_#00ffe7] z-10" />
-
+                <span className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#00ffe7] border-4 border-[#0c0f14] rounded-full shadow-[0_0_12px_#00ffe7] z-10 
+                animate-pulse" />
+                
                 <div
                   className="w-full md:max-w-md bg-[#1c1f26]/80 backdrop-blur-md border-2 border-[#B8EF43]/40 p-6 rounded-xl 
                   shadow-[0_0_12px_#B8EF43] transition duration-300
