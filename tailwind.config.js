@@ -77,6 +77,32 @@ export default {
             boxShadow: '0 0 25px #6f00ff, 0 0 35px #00ffe7',
           },
         },
+        hologramGlow: {
+          '0%, 100%': {
+            color: '#00ffe7',
+            textShadow: '0 0 10px #00ffe7, 0 0 20px #6f00ff',
+          },
+          '50%': {
+            color: '#6f00ff',
+            textShadow: '0 0 12px #6f00ff, 0 0 25px #00ffe7',
+          },
+        },
+        blinkCaret: {
+          '0%, 100%': { borderColor: 'transparent' },
+          '50%': { borderColor: '#00ffe7' },
+        },
+        sendGlow: {
+          '0%, 100%': {
+            boxShadow: '0 0 6px #00ffe7, 0 0 12px #00ffe7',
+          },
+          '50%': {
+            boxShadow: '0 0 12px #00ffe7, 0 0 24px #6f00ff',
+          },
+        },
+        chatBg: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
       },
       animation: {
         glowBar: 'glowBar 1s ease-in-out infinite',
@@ -87,6 +113,10 @@ export default {
         orbit: 'orbit 6s linear infinite',
         'orbit-glow': 'orbitPulse 6s linear infinite',
         'glow-gradient': 'glowGradient 5s ease-in-out infinite', // For navbar
+        hologram: 'hologramGlow 2.5s ease-in-out infinite',
+        'blink-caret': 'blinkCaret 1s step-end infinite',
+        'send-glow': 'sendGlow 2s ease-in-out infinite',
+        'chat-bg': 'chatBg 8s ease-in-out infinite',
       },
       backgroundSize: {
         '200': '200% 200%',
