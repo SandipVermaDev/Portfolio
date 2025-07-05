@@ -38,7 +38,7 @@ const RobotAssistant = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
+    <div className="fixed bottom-4 right-2 sm:bottom-4 sm:right-2 z-50">
       <div
         ref={containerRef}
         className="relative w-28 h-28 sm:w-52 sm:h-52 cursor-pointer transition-all duration-300"
