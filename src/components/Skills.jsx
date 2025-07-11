@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import QuantumCircuitBackground from './QuantumCircuitBackground';
 
 const skills = [
   'Python',
@@ -24,6 +25,9 @@ const Skills = () => {
 
   return (
     <section id="skills" className="relative min-h-screen w-full bg-black text-white flex flex-col items-center justify-center px-6 py-16">
+      {/* Add the quantum circuit background */}
+      <QuantumCircuitBackground />
+
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +69,7 @@ const Skills = () => {
             >
               01110000 01110010 01101111 01101010 01100101 01100011 01110100 01110011
             </motion.div>
-      
+
             {/* Container for disc and scanner */}
             <div className="relative w-12 h-12">
               {/* Scanner Beam */}
@@ -85,7 +89,7 @@ const Skills = () => {
                   ease: "easeInOut"
                 }}
               />
-      
+
               {/* Holographic Disc - arrow removed */}
               <motion.div
                 className="relative w-full h-full rounded-full border-2 border-[#00ffe7] flex items-center justify-center"
@@ -117,7 +121,7 @@ const Skills = () => {
                     />
                   ))}
                 </div>
-                
+
                 {/* Central Pulse Effect - replacing the arrow */}
                 <motion.div
                   className="absolute w-3 h-3 rounded-full bg-[#00ffe7]"
@@ -133,7 +137,7 @@ const Skills = () => {
                 />
               </motion.div>
             </div>
-      
+
             {/* Text Label */}
             <motion.div
               className="mt-2 text-[#00ffe7] font-orbitron text-sm"

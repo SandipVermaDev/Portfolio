@@ -22,7 +22,7 @@ function App() {
       <section id="home"><Hero /></section>
       <TransitionDivider />
       <section id="education"><Education /></section>
-      <TransitionDivider />
+      {/* <TransitionDivider /> */}
       <section id="skills"><Skills /></section>
       <TransitionDivider />
       <section id="projects"><Projects /></section>
