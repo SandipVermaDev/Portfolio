@@ -24,7 +24,7 @@ function App() {
       <section id="education"><Education /></section>
       {/* <TransitionDivider /> */}
       <section id="skills"><Skills /></section>
-      <TransitionDivider />
+      {/* <TransitionDivider /> */}
       <section id="projects"><Projects /></section>
       <TransitionDivider />
       <section id="contact"><Contact /></section>
