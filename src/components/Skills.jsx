@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import StarsBackground from './StarsBackground';
 
 const skills = [
   'Python',
@@ -23,7 +24,8 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="relative min-h-screen w-full bg-black text-white flex flex-col items-center justify-center px-6 py-16">
+    <section id="skills" className="relative min-h-screen w-full text-white flex flex-col items-center justify-center px-6 py-16">
+      <StarsBackground />
 
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
